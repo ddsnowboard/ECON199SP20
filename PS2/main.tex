@@ -1,0 +1,33 @@
+\documentclass[letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{multirow}
+\usepackage{graphicx}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\begin{document}
+\title{ECON 199 Problem Set 2}
+\author{Will Koster (jameswk2; 651028726) \and Javier Garza (javierg2; 667146159)}
+\date{Feb 29, 2020}
+\maketitle
+
+\clearpage
+
+\section{Problem 1}
+\begin{enumerate}
+    \item 
+\begin{tabular}{|l|l|l|l|}
+\multicolumn{4}{c}{P2}                      \\ \hline
+\multirow{3}{*}{P1} &   & Cheat        & Honest        \\ \hline
+                       & Cheat & $0,0$ & $\overline2, \overline1$ \\ \hline
+                       & Honest & $\overline1, \overline2$ & $1,1$ \\ \hline
+\end{tabular} \\
+\item The two Nash equilibria are when one player cheats and the other is honest.
+\item \begin{enumerate}
+        \item This would likely not change the game at all. It could possibly cause guilt for cheating even if the cheater is not caught, which could make cheating less appealing in cases where the guilt outweighs the work required to be honest (id est, easy classes).
+        \item Assuming the only way to get caught is if both players try to cheat, whether the payoff for getting caught is $0$ or $-1,000,000$, it won't change the outcome because the payoff there is never chosen for the Nash equilibrium anyway, so this wouldn't change anything.
+        \item If both players cheat but they don't get caught, both players still don't know anything, so even if they copy each other, they won't have the right answers. This means that, which the payoff for both players cheating might increase slightly, it will still be worse than if either of them was honest, which means it won't change the outcome.
+    \end{enumerate}
+\end{enumerate}
+\end{document}
