@@ -1,0 +1,61 @@
+\documentclass[letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{amsfonts}
+\usepackage{multirow}
+\usepackage{graphicx}
+
+\begin{document}
+\title{ECON 199 Classwork 9}
+\author{Will Koster (jameswk2; 651028726) \and Javier Garza (javierg2; 667146159)}
+\date{Mar 30, 2020}
+\maketitle
+
+\section{Problem 1}
+\begin{enumerate}
+    \item I watched it
+    \item Each player can jump or stay until they see their partner jump. If both players jump, we assume the bystanders perceive a tie and nobody gains anything. If one player jumps and the other stays, the jumper loses and is thus a chicken. If both players stay, they both die. 
+    \item \begin{tabular}{|l|l|l|l|}
+            \multicolumn{3}{r}{P2}                      \\ \hline
+            \multirow{3}{*}{P1} &   & Stay        & Jump        \\ \hline
+            & Stay & $-10,-10$ & $1, -1$ \\ \hline
+            & Jump & $-1, 1$ & $0,0$ \\ \hline
+        \end{tabular} \\
+    \item This is not a zero-sum game, since there is one scenario where both players lose a lot.
+    \item If you have to choose a strategy deterministically, I'd probably choose to jump, since the lowest-risk Nash equilibrium is a focal point for me. 
+    \item There are two pure-strategy Nash equilibria, the ones where one player jumps and the other stays. \\
+        To find the mixed-strategy Nash equilibrium, we want to find the probability $p$ that player 1 stays for which player 2 is indifferent between his two options. Since this game is symmetric, both players will have the same mixed-strategy equilibrium. So we have 
+        \[
+            \mathbb{E}_p[\text{P2's outcome given that P2 stays}] = \mathbb{E}_p[\text{P2's outcome given that P2 jumps}]
+        \]
+        where $\mathbb{E}_p$ is the expected value given the probability $p$. We can calculate these expectations: 
+        \[
+            \mathbb{E}_p[\text{P2's outcome given that P2 stays}] = p(-10) + (1 - p)1
+        \]
+
+        \[
+            \mathbb{E}_p[\text{P2's outcome given that P2 jumps}] = p(-1) + 0(1 - p)
+        \]
+        Now, by setting those expressions equal and solving for $p$, we find that $p = \frac{1}{10}$. That is, the mixed strategy equilibrium is that both players jump with probability $0.9$.
+    \item In the Prisoners' Dilemma, regardless of what your partner does, your optimal outcome comes from turning on them. This is not true in Chicken; if your partner turns on you, turning back on them results in a situation that is pessimal for each individual and for the group as a whole. 
+    \item This is similar to the game where John Nash and his friends try to get girls at the bar. If they all cooperate, they come to a pretty good outcome for everyone, but if exactly one person defects, he does much better than everyone else. If, however, more than one person defects, the outcome is very bad.
+    \item If you could convince the other player that you were not jumping until they jumped (or, better yet, show them some automatic system that physically prevented it), their only choices would be to drive off the edge or jump early, which would guarantee that you would win.
+    \item In this case, it could be optimal to trade wins. I asssumed that the absolute value of the utility from winning was the same as it was from losing, but that could not be the case. If both sides make a deal, there is no incentive to to defect from the deal, as there is in the Prisoners' Dilemma. Therefore, the two sides could come to a deal that maxmizes utility for them and they could both assume that the other will stick to the deal.
+    \item If there is a stalemated war, the surrendering side will incur costs for surrendering, but the costs of extending the war indefinitely are much larger. Similarly, it's a pain for whoever takes out the trash in my house to do so, but if no one does it, the house will smell bad and trash will pile up everywhere, which is much worse. 
+\end{enumerate}
+\section{Problem 2}
+\begin{enumerate}
+    \item I watched it.
+    \item He's in effect looking for the focal point of the game, which is generally based on cultural values and other similar things that are very hard to quantify with certainty. My suspicion is that he'd do just as well to choose at random. 
+    \item I chose to specify the cups as the southernmost cup and the northernmost cup. It's possible that the are both on the same line of latitude, but chances are very good that it unambiguously specifies each cup independently of the position of the observer. \\
+        \begin{tabular}{|l|l|l|l|}
+            \multicolumn{3}{r}{Westley}                      \\ \hline
+            \multirow{3}{*}{Vizzini} &   & Poison North Cup        & Poison South Cup        \\ \hline
+            & Pick North Cup & $-1,1$ & $1, -1$ \\ \hline
+            & Pick South Cup & $1, -1$ & $-1,1$ \\ \hline
+        \end{tabular} \\
+    \item This is a zero-sum game.
+    \item I suspect the best strategy is for each player to choose their cup at random.
+    \item There is no pure strategy Nash equilibrium, but there is a mixed strategy one, where each player chooses the north cup with probability $\frac{1}{2}$.
+\end{enumerate}
+\end{document}
